@@ -1,35 +1,163 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import pages and components
+import Dashboard from './pages/dashboard.jsx';
+import FuelStatus from './pages/fuelstatus.jsx';
+import BatteryStatus from './pages/batterystatus.jsx';
+import LiveTracking from './pages/livetracking.jsx';
+import TripManage from './pages/tripmanage.jsx';
+import VehicleHealth from './pages/vehiclehealth.jsx';
+import Reports from './pages/reports.jsx';
+import BatteryReport from './pages/batteryreport.jsx';
+import FuelReport from './pages/fuelreport.jsx';
+import TripReport from './pages/tripreport.jsx';
+import Profile from './pages/profile.jsx';
+import Register from './pages/Register.jsx';
+import Login from './pages/Login.jsx';
+import GoogleLogin from './pages/GoogleLogin.jsx';
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+// Sidebar component for consistent navigation
+import Sidebar from './components/sidebar.jsx';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <Dashboard />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    ),
+  },
+  {
+    path: "/fuelstatus",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <FuelStatus />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    ),
+  },
+  {
+    path: "/batterystatus",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <BatteryStatus />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/livetracking",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <LiveTracking />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/tripmanage",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <TripManage />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/vehiclehealth",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <VehicleHealth />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/reports",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <Reports />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/batteryreport",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <BatteryReport />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/fuelreport",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <FuelReport />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/tripreport",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <TripReport />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/profile",
+    element: (
+      <div className="flex min-h-screen bg-gray-100">
+        <Sidebar />
+        <div className="flex-1 overflow-auto ml-0 lg:ml-64">
+          <Profile />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/google-login",
+    element: <GoogleLogin />,
+  }
+]);
 
-export default App
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;

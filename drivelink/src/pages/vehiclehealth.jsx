@@ -1,0 +1,175 @@
+import React from 'react';
+
+const VehicalHealth = () => {
+  return (
+    <div className="flex h-screen bg-gray-100">
+      {/* Sidebar */}
+      <nav className="w-64 bg-blue-600 text-white p-4">
+        <ul>
+          <li className="mb-4">
+            <p className="logo font-bold text-xl" id="usernametag">Hi, -- !</p>
+            <button
+              id="toggle-btn"
+              className="mt-2 bg-transparent border-0 text-white"
+              onClick={() => alert('Sidebar Toggle!')}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+              </svg>
+            </button>
+          </li>
+
+          <li>
+            <a href="dashboard.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+              </svg>
+              <span className="ml-2">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="fuelstatus.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path d="M160-120v-640q0-33 23.5-56.5T240-840h240q33 0 56.5 23.5T560-760v280h40q33 0 56.5 23.5T680-400v180q0 17 11.5 28.5T720-180q17 0 28.5-11.5T760-220v-288q-9 5-19 6.5t-21 1.5q-42 0-71-29t-29-71q0-32 17.5-57.5T684-694l-84-84 42-42 148 144q15 15 22.5 35t7.5 41v380q0 42-29 71t-71 29q-42 0-71-29t-29-71v-200h-60v300H160zm80-440h240v-200H240v200zm480 0q17 0 28.5-11.5T760-600q0-17-11.5-28.5T720-640q-17 0-28.5 11.5T680-600q0 17 11.5 28.5T720-560zM240-200h240v-280H240v280zm240 0H240h240z" />
+              </svg>
+              <span className="ml-2">Fuel Status</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="batterystatus.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path d="M200-280q-17 0-28.5-11.5T160-320v-80H80v-160h80v-80q0-17 11.5-28.5T200-680h640q17 0 28.5 11.5T880-640v320q0 17-11.5 28.5T840-280H200zm40-80h160v-240H240v240z" />
+              </svg>
+              <span className="ml-2">Battery Status</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="livetraking.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80zm0-480z" />
+              </svg>
+              <span className="ml-2">Live Tracking</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="tripmange.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path d="M300-300l280-80 80-280-280 80-80 280zm180-120q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80zm0-80q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160zm0-320z" />
+              </svg>
+              <span className="ml-2">Trip Manage</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="vehicalhelth.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path d="M480-120l-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228zm0-273z" />
+              </svg>
+              <span className="ml-2">Vehical Helth</span>
+            </a>
+          </li>
+
+          <li>
+            <button className="dropdown-btn flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+                fill="#e3e3e3"
+              >
+                <path d="M80-600v-160q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v160h-80v-160H160v160H80zm80 360q-33 0-56.5-23.5T80-320v-200h80v200h640v-200h80v200q0 33-23.5 56.5T800-240H160zM40-120v-80h880v80H40zm440-420zM80-520v-80h240q11 0 21 6t15 16l47 93 123-215q5-9 14-14.5t20-5.5q11 0 21 5.5t15 16.5l49 98h235v80H620q-11 0-21-5.5T584-542l-26-53-123 215q-5 10-15 15t-21 5q-11 0-20.5-6T364-382l-69-138H80z" />
+              </svg>
+              <span className="ml-2">Report</span>
+            </button>
+            <ul className="sub-menu">
+              <div>
+                <li>
+                  <a href="tripreport.html" className="p-2 block hover:bg-blue-400">Trip Report</a>
+                </li>
+                <li>
+                  <a href="fuelreport.html" className="p-2 block hover:bg-blue-400">Fuel Report</a>
+                </li>
+                <li>
+                  <a href="batteryreport.html" className="p-2 block hover:bg-blue-400">Battery Report</a>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <a href="profile.html" className="flex items-center mb-4 hover:bg-blue-500 p-2 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+                fill="#e3e3e3"
+              >
+                <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47zM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560zm0-80zm0 400z" />
+              </svg>
+              <span className="ml-2">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main className="flex-1 p-6">
+        <div className="text-center mb-6">
+          <h1 className="text-3xl font-bold">Drive<span className="highlight text-blue-600">Link</span></h1>
+          <p className="text-xl">Vehical Health</p>
+        </div>
+        <div className="text-center">
+          <h1 className="text-2xl font-semibold">Vehical Health</h1>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default VehicalHealth;
